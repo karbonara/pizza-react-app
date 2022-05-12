@@ -1,13 +1,14 @@
 @import '../variables';
 
 .pizza-block {
-  width: 280px;
+  width: 275px;
   text-align: center;
   margin-bottom: 65px;
 
   &-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__image {
@@ -19,6 +20,7 @@
     font-weight: 900;
     letter-spacing: 1%;
     margin-bottom: 20px;
+    height: 40px;
   }
 
   &__selector {

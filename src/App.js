@@ -1,7 +1,9 @@
+import Categories from './components/Categories';
 import Header from './components/Header';
 import PizzaBlock from './components/Pizza-block/PizzaBlock';
 import Sort from './components/Sort';
 import './scss/app.scss';
+import pizzas from './assets/pizzas.json';
 
 function App() {
   return (
@@ -10,20 +12,11 @@ function App() {
       <div className="content">
         <div className="container">
           <div className="content__top">
-            <div className="categories">
-              <ul>
-                <li className="active">Все</li>
-                <li>Мясные</li>
-                <li>Вегетарианская</li>
-                <li>Гриль</li>
-                <li>Острые</li>
-                <li>Закрытые</li>
-              </ul>
-            </div>
+            <Categories />
             <Sort />
           </div>
           <h2 className="content__title">Все пиццы</h2>
-          <PizzaBlock />
+          <PizzaBlock pizzas={pizzas} />
         </div>
       </div>
     </div>
