@@ -4,10 +4,12 @@ import PizzaBlock from './components/Pizza-block/PizzaBlock';
 import Sort from './components/Sort';
 import './scss/app.scss';
 import { useState, useEffect } from 'react';
+import Skeleton from './components/Pizza-block/Skeleton';
 
 function App() {
 
   const [item, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://627e76e4b75a25d3f3b8a189.mockapi.io/items')
@@ -31,7 +33,7 @@ function App() {
           <h2 className="content__title">Все пиццы</h2>
           <div className='pizza-block-wrapper'>
             {item.map((index) => (
-              <PizzaBlock key={index.id} {...index} />
+              <Skeleton key={index.id} {...index} />
             ))}
           </div>
         </div>
