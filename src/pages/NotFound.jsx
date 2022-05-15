@@ -1,6 +1,8 @@
+import NotFoundBlock from '../components/NotFoundBlock/NotFoundBlock';
+
 function NotFound() {
     return (
-        <h1>NotFound</h1>
+        <NotFoundBlock />
     );
 }
 
