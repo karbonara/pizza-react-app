@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import styles from './Search.module.scss';
+import { SearchContext } from '../../App'
 
-function Search({ searchValue, setSearchValue }) {
+function Search() {
+    const { searchValue, setSearchValue } = useContext(SearchContext);
+
     return (
         <div className={styles.root}>
             <svg
@@ -41,6 +45,7 @@ function Search({ searchValue, setSearchValue }) {
                 onChange={(e) => setSearchValue(e.target.value)}
                 className={styles.input}
                 placeholder="Поиск пиццы..."
+                type="text"
             />
             {searchValue ?
                 (
